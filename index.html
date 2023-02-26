@@ -1,101 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Fuente Be Vietnam -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS para el slider de cards -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Manage landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
-
-  Get Started
-
-  Bring everyone together to build better products.
-
-  Manage makes it simple for software teams to plan day-to-day 
-  tasks while keeping the larger team goals in view.
-
-  Get Started
-
-  What’s different about Manage?
-
-  Manage provides all the functionality your team needs, without 
-  the complexity. Our software is tailor-made for modern digital 
-  product teams. 
-
-  01
-  Track company-wide progress
-  See how your day-to-day tasks fit into the wider vision. Go from 
-  tracking progress at the milestone level all the way done to the 
-  smallest of details. Never lose sight of the bigger picture again.
-
-  02
-  Advanced built-in reports
-  Set internal delivery estimates and track progress toward company 
-  goals. Our customisable dashboard helps you build out the reports 
-  you need to keep key stakeholders informed.
-
-  03
-  Everything you need in one place
-  Stop jumping from one service to another to communicate, store files, 
-  track tasks and share documents. Manage offers an all-in-one team 
-  productivity solution.
-
-  What they’ve said
-
-  Anisha Li
-  “Manage has supercharged our team’s workflow. The ability to maintain 
-  visibility on larger milestones at all times keeps everyone motivated.”
-
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions since using 
-  Manage. There is no more cross-channel confusion and everyone is much 
-  more focused.”
-
-  Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized 
-  and focused. I can’t stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without being intrusive.”
-
-  Get Started
-
-  Simplify how your team works today.
-  Get Started
-
-  Home
-  Pricing
-  Products
-  About Us
-  Careers
-  Community
-  Privacy Policy
-
-  Updates in your inbox…
-  Go
-
-  Copyright 2020. All Rights Reserved
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Normalice para resetear estilos del navegador -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <!-- Variables globales del root -->
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Soluciones Jorge</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="backdrop"></div>
+      <div class="logo__container">
+        <img
+          class="header__logo"
+          src="/images/Logo.png"
+          alt="Imagen Logo de la empresa"
+        />
+        <p class="logo__text">Servicio Integral de Gestión Técnica</p>
+      </div>
+      <div class="header__button">
+        <div></div>
+      </div>
+    </header>
+    <main class="main">
+      <article id="producto" class="main__descripcion">
+        <img src="/images/glpi.png" alt="Ilustracion de prueba" />
+        <div class="descripcion">
+          <h1 class="descripcion__heading"
+            >Consigue el mejor soporte técnico del mercado.</h1
+          >
+          <p class="descripcion__texto"
+            >Manage makes it simple for software teams to plan day-to-day tasks
+            while keeping the larger team goals in view.</p
+          >
+          <button class="btn descripcion__btn">Contacto</button>
+        </div>
+      </article>
+      <article class="diferencias">
+        <div class="diferencias__redaccion">
+          <h2 class="diferencias__titulo">What’s different about Manage?</h2>
+          <p class="diferencias__texto"
+            >Manage provides all the functionality your team needs, without the
+            complexity. Our software is tailor-made for modern digital product
+            teams.
+          </p>
+        </div>
+        <div class="diferencias__puntos">
+          <ol class="lista">
+            <li class="lista__objeto">
+              <div class="objeto__titulo">
+                <p class="objeto__numero">01</p>
+                <p class="objeto__heading">Track company-wide progress</p>
+              </div>
+              <p class="objeto__descripcion"
+                >See how your day-to-day tasks fit into the wider vision. Go
+                from tracking progress at the milestone level all the way done
+                to the smallest of details. Never lose sight of the bigger
+                picture again.</p
+              >
+            </li>
+            <li class="lista__objeto">
+              <div class="objeto__titulo">
+                <p class="objeto__numero">02</p>
+                <p class="objeto__heading">Advanced built-in reports</p>
+              </div>
+              <p class="objeto__descripcion"
+                >Set internal delivery estimates and track progress toward
+                company goals. Our customisable dashboard helps you build out
+                the reports you need to keep key stakeholders informed.</p
+              >
+            </li>
+            <li class="lista__objeto">
+              <div class="objeto__titulo">
+                <p class="objeto__numero">03</p>
+                <p class="objeto__heading">Everything you need in one place</p>
+              </div>
+              <p class="objeto__descripcion"
+                >Stop jumping from one service to another to communicate, store
+                files, track tasks and share documents. Manage offers an
+                all-in-one team productivity solution.</p
+              >
+            </li>
+          </ol>
+        </div>
+      </article>
+      <article class="opiniones">
+        <h1 class="opiniones__titulo">What they’ve said</h1>
+        <!-- Contenedor del swiper -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Diferentes opiniones -->
+            <div class="swiper-slide card">
+              <img
+                src="/images/avatar-ali.png"
+                alt="Avatar de ali"
+                class="card__imagen"
+              />
+              <h3 class="card__name">Ali Bravo</h3>
+              <p class="card__texto"
+                >“We have been able to cancel so many other subscriptions since
+                using Manage. There is no more cross-channel confusion and
+                everyone is much more focused.”</p
+              >
+            </div>
+            <div class="swiper-slide card">
+              <img
+                src="/images/avatar-anisha.png"
+                alt="Avatar de ali"
+                class="card__imagen"
+              />
+              <h3 class="card__name">Anisha Li</h3>
+              <p class="card__texto"
+                >“Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”</p
+              >
+            </div>
+            <div class="swiper-slide card">
+              <img
+                src="/images/avatar-richard.png"
+                alt="Avatar de ali"
+                class="card__imagen"
+              />
+              <h3 class="card__name">Richard Watts</h3>
+              <p class="card__texto"
+                >“Manage allows us to provide structure and process. It keeps us
+                organized and focused. I can’t stop recommending them to
+                everyone I talk to!”</p
+              ></div
+            >
+            <div class="swiper-slide card">
+              <img
+                src="/images/avatar-shanai.png"
+                alt="Avatar de ali"
+                class="card__imagen"
+              />
+              <h3 class="card__name">Shanai Gough</h3>
+              <p class="card__texto"
+                >“Their software allows us to track, manage and collaborate on
+                our projects from anywhere. It keeps the whole team in-sync
+                without being intrusive.”</p
+              ></div
+            >
+          </div>
+          <!-- Paginacion -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="btn__container">
+          <button class="btn">Contacto</button>
+        </div>
+      </article>
+      <article id="precio" class="subscripciones">
+        <h1 class="subscripciones__titulo titulo">Planes para tu empresa</h1>
+        <div class="subscripcion__card">
+          <h3 class="subscripcion__heading">Plan Premium</h3>
+          <p class="subscripcion__descripcion"
+            >Contrata nuestros servicio on-line de servicio técnico en remoto y
+            resolveremos todas tus incidencias durante el horario laboral de tu
+            empresa mediante GLPI</p
+          >
+        </div>
+        <div class="subscripcion__card subscripcion__card--full">
+          <h3 class="subscripcion__heading subscripcion__heading--full"
+            >Plan Full-Time</h3
+          >
+          <p class="subscripcion__descripcion"
+            >Obtendras servicio de soporte técnico 24 horas para cualquier tipo
+            de incidencia informática, además de consultas telefónicas en caso
+            de dudas, sin necesidad de usar nuestra plataforma GLPI</p
+          >
+        </div>
+      </article>
+      <article class="nosotros">
+        <h3 class="titulo">¿Quienes Somos?</h3>
+        <div class="nosotros__cards">
+          <div class="nosotros__card">
+            <h4 class="card__name">David Morgade</h4>
+            <div class="card__separacion">
+              <img
+                class="card__imagen--nosotros"
+                src="/images/david.jpg"
+                alt="imagen técnico informático david"
+              />
+              <p class="card__texto"
+                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic,
+                quibusdam libero, iste rerum deserunt corrupti praesentium saepe
+                deleniti voluptatibus voluptas quo incidunt et ab veniam
+                delectus a! Aperiam, blanditiis necessitatibus!</p
+              >
+            </div>
+          </div>
+          <div class="nosotros__card">
+            <h4 class="card__name">Jorge Arrebola</h4>
+            <div class="card__separacion">
+              <img
+                class="card__imagen--nosotros card__imagen--nosotros2"
+                src="/images/jorge.jpg"
+                alt="imagen técnico informático david"
+              />
+              <p class="card__texto"
+                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic,
+                quibusdam libero, iste rerum deserunt corrupti praesentium saepe
+                deleniti voluptatibus voluptas quo incidunt et ab veniam
+                delectus a! Aperiam, blanditiis necessitatibus!</p
+              >
+            </div>
+          </div>
+          <div class="nosotros__card">
+            <h4 class="card__name">Oscar Villen</h4>
+            <div class="card__separacion">
+              <img
+                class="card__imagen--nosotros"
+                src="/images/oscar.jpg"
+                alt="imagen técnico informático david"
+              />
+              <p class="card__texto"
+                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic,
+                quibusdam libero, iste rerum deserunt corrupti praesentium saepe
+                deleniti voluptatibus voluptas quo incidunt et ab veniam
+                delectus a! Aperiam, blanditiis necessitatibus!</p
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <form class="formulario">
+        <fieldset>
+          <legend class="formulario__titulo">Contacta con nosotros</legend>
+          <div class="formulario__campo">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              value=""
+              placeholder="Nombre"
+              maxlength="30"
+            />
+          </div>
+          <div class="formulario__campo">
+            <label for="email">Correo Electrónico</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              placeholder="Correo Electrónico"
+              maxlength="30"
+            />
+          </div>
+          <div class="formulario__campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              value=""
+              placeholder="Pregunta por nuestros servicios..."
+              cols="40"
+              rows="5"
+              maxlength="400"
+            ></textarea>
+          </div>
+        </fieldset>
+        <div class="formulario__btn--container">
+          <input type="submit" class="formulario__btn btn" value="Enviar" />
+        </div>
+      </form>
+      <div class="social">
+        <img
+          class="social__logo"
+          src="/images/icon-facebook.svg"
+          alt="social media facebook"
+        />
+        <img
+          class="social__logo"
+          src="/images/icon-twitter.svg"
+          alt="social media facebook"
+        />
+        <img
+          class="social__logo"
+          src="/images/icon-instagram.svg"
+          alt="social media facebook"
+        />
+        <img
+          class="social__logo"
+          src="/images/icon-youtube.svg"
+          alt="social media facebook"
+        />
+      </div>
+      <div class="empresa__container">
+        <img
+          class="social__logo--empresa"
+          src="/images/LogoLetras.png"
+          alt="image logo"
+        />
+      </div>
+    </footer>
+    <script src="/js/scripts.js"></script>
+  </body>
 </html>
