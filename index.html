@@ -46,28 +46,55 @@
       <div class="header__button">
         <div></div>
       </div>
+      <div class="header__navegacion">
+        <ul class="desplegable__lista">
+          <li class="desplegable__item"
+            ><a href="#producto" class="desplegable__enlace">Producto</a></li
+          >
+          <li class="desplegable__item"
+            ><a href="#opiniones" class="desplegable__enlace">Opiniones</a></li
+          >
+          <li class="desplegable__item"
+            ><a href="#precio" class="desplegable__enlace">Precio</a></li
+          >
+          <li class="desplegable__item"
+            ><a href="#nosotros" class="desplegable__enlace"
+              >¿Quienes Somos?</a
+            ></li
+          >
+          <li class="desplegable__item"
+            ><a href="#contacto" class="desplegable__enlace">Contacto</a></li
+          >
+        </ul>
+      </div>
     </header>
     <main class="main">
       <article id="producto" class="main__descripcion">
-        <img src="/images/glpi.png" alt="Ilustracion de prueba" />
+        <img
+          class="main__imagen"
+          src="/images/glpi.png"
+          alt="Ilustracion de prueba"
+        />
         <div class="descripcion">
           <h1 class="descripcion__heading"
             >Consigue el mejor soporte técnico del mercado.</h1
           >
           <p class="descripcion__texto"
-            >Manage makes it simple for software teams to plan day-to-day tasks
-            while keeping the larger team goals in view.</p
+            >Con nuestro servido de soporte técnico nunca más tendrás que
+            preocuparte por una incidencia informatica.</p
           >
-          <button class="btn descripcion__btn">Contacto</button>
+          <a href="#contacto" class="btn descripcion__btn">Contacto</a>
         </div>
       </article>
       <article class="diferencias">
         <div class="diferencias__redaccion">
-          <h2 class="diferencias__titulo">What’s different about Manage?</h2>
+          <h2 class="diferencias__titulo"
+            >¿En que nos diferenciamos respecto al resto?</h2
+          >
           <p class="diferencias__texto"
-            >Manage provides all the functionality your team needs, without the
-            complexity. Our software is tailor-made for modern digital product
-            teams.
+            >Damos respuesta a distintos sectores y nos adaptamos a las
+            necesidades de los mismos, dando una respuesta eficaz y rápida
+            gracias a nuestros técnicos, tanto en remoto como en presencial.
           </p>
         </div>
         <div class="diferencias__puntos">
@@ -75,42 +102,45 @@
             <li class="lista__objeto">
               <div class="objeto__titulo">
                 <p class="objeto__numero">01</p>
-                <p class="objeto__heading">Track company-wide progress</p>
+                <p class="objeto__heading"
+                  >Soporte de la mano de profesionales</p
+                >
               </div>
               <p class="objeto__descripcion"
-                >See how your day-to-day tasks fit into the wider vision. Go
-                from tracking progress at the milestone level all the way done
-                to the smallest of details. Never lose sight of the bigger
-                picture again.</p
+                >Nuestros profesionales se encuentran certificados en una amplia
+                gama de tecnologías modernas y software actual, con el que
+                podrán ayudarte con tus problemas.</p
               >
             </li>
             <li class="lista__objeto">
-              <div class="objeto__titulo">
+              <div class="objeto__titulo objeto__titulo--reves">
                 <p class="objeto__numero">02</p>
-                <p class="objeto__heading">Advanced built-in reports</p>
+                <p class="objeto__heading">Nos adaptamos a tu entorno</p>
               </div>
               <p class="objeto__descripcion"
-                >Set internal delivery estimates and track progress toward
-                company goals. Our customisable dashboard helps you build out
-                the reports you need to keep key stakeholders informed.</p
+                >Nuestros técnicos recibirán una formación especifica para el
+                sector en concreto al que pertenezca su negocio, para un menor
+                tiempo de resolución de incidencias</p
               >
             </li>
             <li class="lista__objeto">
               <div class="objeto__titulo">
                 <p class="objeto__numero">03</p>
-                <p class="objeto__heading">Everything you need in one place</p>
+                <p class="objeto__heading"
+                  >La solución al alcance de un "click"</p
+                >
               </div>
               <p class="objeto__descripcion"
-                >Stop jumping from one service to another to communicate, store
-                files, track tasks and share documents. Manage offers an
-                all-in-one team productivity solution.</p
+                >Con nuestra aplicación de soporte técnico, tendrás una
+                comunicación y resolución rápida a tus incidencias, ¡Casi en
+                tiempo real!</p
               >
             </li>
           </ol>
         </div>
       </article>
-      <article class="opiniones">
-        <h1 class="opiniones__titulo">What they’ve said</h1>
+      <article id="opiniones" class="opiniones">
+        <h1 class="opiniones__titulo">Opiniones</h1>
         <!-- Contenedor del swiper -->
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -121,11 +151,11 @@
                 alt="Avatar de ali"
                 class="card__imagen"
               />
-              <h3 class="card__name">Ali Bravo</h3>
+              <h3 class="card__name">Souleima García</h3>
               <p class="card__texto"
-                >“We have been able to cancel so many other subscriptions since
-                using Manage. There is no more cross-channel confusion and
-                everyone is much more focused.”</p
+                >“Desde que contratamos el servicio de SINGETEC no hemos vuelto
+                a tener ningún problema informático, los técnicos son rápidos y
+                eficaces.”</p
               >
             </div>
             <div class="swiper-slide card">
@@ -134,11 +164,10 @@
                 alt="Avatar de ali"
                 class="card__imagen"
               />
-              <h3 class="card__name">Anisha Li</h3>
+              <h3 class="card__name">María Li</h3>
               <p class="card__texto"
-                >“Manage has supercharged our team’s workflow. The ability to
-                maintain visibility on larger milestones at all times keeps
-                everyone motivated.”</p
+                >“El sistema de tickets de la aplicación es maravilloso,
+                adaptado completamente a mi empresa, lo recomiendo.”</p
               >
             </div>
             <div class="swiper-slide card">
@@ -147,11 +176,11 @@
                 alt="Avatar de ali"
                 class="card__imagen"
               />
-              <h3 class="card__name">Richard Watts</h3>
+              <h3 class="card__name">Aurelio Matamoros</h3>
               <p class="card__texto"
-                >“Manage allows us to provide structure and process. It keeps us
-                organized and focused. I can’t stop recommending them to
-                everyone I talk to!”</p
+                >“Tengo un empresa en el sector de la construcción, sin tener ni
+                idea de informática los chicos de SINGETEC me han resulto todas
+                las dudas que tenía y he acabado contratando su servicio”</p
               ></div
             >
             <div class="swiper-slide card">
@@ -160,11 +189,11 @@
                 alt="Avatar de ali"
                 class="card__imagen"
               />
-              <h3 class="card__name">Shanai Gough</h3>
+              <h3 class="card__name">Cayetana Muñoz</h3>
               <p class="card__texto"
-                >“Their software allows us to track, manage and collaborate on
-                our projects from anywhere. It keeps the whole team in-sync
-                without being intrusive.”</p
+                >“Herede la empresa de mi padre y no tenía ni idea de como
+                funcionaba todo el sistema, los chicos de SINGETEC me han
+                salvado la vida.”</p
               ></div
             >
           </div>
@@ -172,7 +201,7 @@
           <div class="swiper-pagination"></div>
         </div>
         <div class="btn__container">
-          <button class="btn">Contacto</button>
+          <a href="#contacto" class="btn">Contacto</a>
         </div>
       </article>
       <article id="precio" class="subscripciones">
@@ -194,12 +223,15 @@
             de incidencia informática, además de consultas telefónicas en caso
             de dudas, sin necesidad de usar nuestra plataforma GLPI</p
           >
+          <p class="subscripcion__descripcion subscripcion__descripcion--mod"
+            >"El más seleccionado por nuestros usuarios"</p
+          >
         </div>
       </article>
-      <article class="nosotros">
+      <article id="nosotros" class="nosotros">
         <h3 class="titulo">¿Quienes Somos?</h3>
         <div class="nosotros__cards">
-          <div class="nosotros__card">
+          <div class="nosotros__card nosotros__card--1">
             <h4 class="card__name">David Morgade</h4>
             <div class="card__separacion">
               <img
@@ -207,15 +239,16 @@
                 src="/images/david.jpg"
                 alt="imagen técnico informático david"
               />
+              <h3 class="card__puesto">CIO</h3>
               <p class="card__texto"
-                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic,
-                quibusdam libero, iste rerum deserunt corrupti praesentium saepe
-                deleniti voluptatibus voluptas quo incidunt et ab veniam
-                delectus a! Aperiam, blanditiis necessitatibus!</p
+                >Responsable de los sistemas y de las tecnologías de la
+                información de la empresa, responsable de identificar y proveer
+                las tecnologías necesarias para que los procesos de SINGETEC
+                funcionen lo mejor posible.</p
               >
             </div>
           </div>
-          <div class="nosotros__card">
+          <div class="nosotros__card nosotros__card--2">
             <h4 class="card__name">Jorge Arrebola</h4>
             <div class="card__separacion">
               <img
@@ -223,15 +256,15 @@
                 src="/images/jorge.jpg"
                 alt="imagen técnico informático david"
               />
+              <h3 class="card__puesto">CTO</h3>
               <p class="card__texto"
-                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic,
-                quibusdam libero, iste rerum deserunt corrupti praesentium saepe
-                deleniti voluptatibus voluptas quo incidunt et ab veniam
-                delectus a! Aperiam, blanditiis necessitatibus!</p
+                >Lider del departamento de tecnología e ingeniería. Responsable
+                del desarrollo de políticas y procedimientos, para la mejora de
+                productos y servicios a los clientes externos.</p
               >
             </div>
           </div>
-          <div class="nosotros__card">
+          <div class="nosotros__card nosotros__card--3">
             <h4 class="card__name">Oscar Villen</h4>
             <div class="card__separacion">
               <img
@@ -239,20 +272,20 @@
                 src="/images/oscar.jpg"
                 alt="imagen técnico informático david"
               />
+              <h3 class="card__puesto">CISO</h3>
               <p class="card__texto"
-                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic,
-                quibusdam libero, iste rerum deserunt corrupti praesentium saepe
-                deleniti voluptatibus voluptas quo incidunt et ab veniam
-                delectus a! Aperiam, blanditiis necessitatibus!</p
+                >Responsable de velar por la ciberseguridad en SINGETEC.
+                Director de seguridad de la información. Encargado de proteger
+                la información.</p
               >
             </div>
           </div>
         </div>
       </article>
     </main>
-    <footer class="footer">
+    <footer id="contacto" class="footer">
       <form class="formulario">
-        <fieldset>
+        <fieldset class="formulario__fieldset">
           <legend class="formulario__titulo">Contacta con nosotros</legend>
           <div class="formulario__campo">
             <label for="nombre">Nombre</label>
@@ -294,33 +327,34 @@
         </div>
       </form>
       <div class="social">
-        <img
-          class="social__logo"
-          src="/images/icon-facebook.svg"
-          alt="social media facebook"
-        />
-        <img
-          class="social__logo"
-          src="/images/icon-twitter.svg"
-          alt="social media facebook"
-        />
-        <img
-          class="social__logo"
-          src="/images/icon-instagram.svg"
-          alt="social media facebook"
-        />
-        <img
-          class="social__logo"
-          src="/images/icon-youtube.svg"
-          alt="social media facebook"
-        />
-      </div>
-      <div class="empresa__container">
-        <img
-          class="social__logo--empresa"
-          src="/images/LogoLetras.png"
-          alt="image logo"
-        />
+        <a href="">
+          <img
+            class="social__logo"
+            src="/images/icon-facebook.svg"
+            alt="social media facebook"
+          />
+        </a>
+        <a href="">
+          <img
+            class="social__logo"
+            src="/images/icon-twitter.svg"
+            alt="social media facebook"
+          />
+        </a>
+        <a href="">
+          <img
+            class="social__logo"
+            src="/images/icon-instagram.svg"
+            alt="social media facebook"
+          />
+        </a>
+        <a href="">
+          <img
+            class="social__logo"
+            src="/images/icon-youtube.svg"
+            alt="social media facebook"
+          />
+        </a>
       </div>
     </footer>
     <script src="/js/scripts.js"></script>

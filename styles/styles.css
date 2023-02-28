@@ -1,8 +1,9 @@
-* {
+/* * {
   box-shadow: 0 0 0 1px red; /*All the borders by using the spread properties*/
-}
-body {
-  scroll-behavior: smooth;
+
+html {
+  scroll-behavior: smooth !important;
+  overflow-y: scroll;
 }
 /* Aplicando fuente principal a todos los elementos de texto */
 h1,
@@ -31,6 +32,18 @@ fieldset {
   font-family: var(--fuentePrincipal);
   margin-top: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 990px) {
+  .btn {
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .btn:hover {
+    opacity: 0.5;
+  }
 }
 
 /* Estilos para el header en mobile */
@@ -40,6 +53,11 @@ fieldset {
   align-items: center;
   justify-content: space-between;
   padding: 0 4rem;
+}
+@media (min-width: 990px) {
+  .header {
+    padding: 0 10rem;
+  }
 }
 .logo__container {
   display: flex;
@@ -109,18 +127,38 @@ fieldset {
   font-weight: 700;
   text-decoration: none;
 }
+/* Navegacion desktop */
+@media (min-width: 990px) {
+  .desplegable__lista {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1440px) {
+  .desplegable__lista {
+    gap: 10rem;
+  }
+}
 /* Main de la pagina */
 .main {
   padding: 0 2.8rem;
+}
+@media (min-width: 990px) {
+  .main {
+    padding: 0 10rem;
+  }
 }
 .main img {
   width: 100%;
 }
 /* Descripcion de la empresa */
-.main__descripcion {
-}
+
 .descripcion {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .descripcion__heading {
   color: var(--colorPrimario);
@@ -135,6 +173,42 @@ fieldset {
   opacity: 0.5;
   font-size: 1.6rem;
   line-height: 2.8rem;
+}
+@media (min-width: 990px) {
+  .descripcion {
+    align-items: flex-start;
+  }
+  .main__descripcion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 50rem;
+    align-items: center;
+    column-gap: 2.5rem;
+  }
+  .main__imagen {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .descripcion {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+  }
+  .descripcion__heading {
+    text-align: left;
+    font-size: 5.6rem;
+    letter-spacing: -1px;
+    line-height: 6.4rem;
+  }
+  .descripcion__texto {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
 }
 /* Seccion de diferencias */
 .diferencias {
@@ -156,6 +230,23 @@ fieldset {
   opacity: 0.5;
   font-size: 1.4rem;
   line-height: 2.8rem;
+}
+@media (min-width: 990px) {
+  .diferencias {
+    display: flex;
+    column-gap: 15rem;
+  }
+  .diferencias__titulo {
+    text-align: left;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.71px;
+  }
+  .diferencias__texto {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
 }
 /* Lista de puntos importantes */
 .lista {
@@ -198,7 +289,14 @@ fieldset {
   color: var(--colorPrimario);
   opacity: 0.5;
 }
-
+@media (min-width: 990px) {
+  .objeto__titulo--reves {
+    flex-direction: row-reverse;
+  }
+  .objeto__descripcion {
+    font-size: 1.6rem;
+  }
+}
 /* Seccion de opiniones */
 .opiniones {
   margin-top: 6.2rem;
@@ -216,6 +314,13 @@ fieldset {
 /* Carrusel swiper */
 .swiper2 {
   height: 29rem;
+}
+@media (min-width: 990px) {
+  .opiniones__titulo {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.71px;
+  }
 }
 /* Cards de opiniones */
 .card {
@@ -248,14 +353,24 @@ fieldset {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 990px) {
+  .card__texto {
+    font-size: 1.6rem;
+  }
+  .card__name {
+    font-size: 2.6rem;
+  }
+}
 /* Secccion de subscripciones */
 .subscripciones {
   text-align: center;
 }
 .subscripcion__card {
-  background-color: var(--colorSecundario);
+  /* background-color: var(--colorSecundario); */
+  background-color: ghostwhite;
   color: var(--colorPrimario);
   border-radius: 1rem;
+  padding: 0 5rem;
 }
 .subscripcion__heading {
   font-size: 1.6rem;
@@ -276,6 +391,29 @@ fieldset {
   background-color: var(--colorPrimario);
   color: var(--colorClaro);
 }
+.subscripcion__descripcion--mod {
+  font-style: italic;
+}
+@media (min-width: 990px) {
+  .subscripciones {
+    display: grid;
+    grid-template-rows: 10rem 30rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .subscripciones__titulo {
+    grid-column: 1 / 3;
+    grid-row: 1/ 2;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.71px;
+  }
+  .subscripcion__heading {
+    font-size: 3rem;
+  }
+  .subscripcion__heading--full {
+    font-size: 3.5rem;
+  }
+}
 /* Seccion quienes somos */
 .nosotros {
   margin-top: 5rem;
@@ -292,8 +430,40 @@ fieldset {
   object-fit: cover;
   border-radius: 1rem 10rem;
 }
+.card__puesto {
+  text-align: center;
+  color: var(--colorSecundario);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
 .card__imagen--nosotros2 {
   border-radius: 10rem 1rem;
+}
+@media (min-width: 990px) {
+  .nosotros__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    column-gap: 2rem;
+  }
+  .nosotros__card {
+    width: 100%;
+  }
+  .nosotros__card--1 {
+    grid-column: 1 / 3;
+    grid-row: 2/3;
+  }
+  .nosotros__card--2 {
+    grid-column: 2 / 3;
+    grid-row: 1/2;
+  }
+  .nosotros__card--3 {
+    grid-row: 1 / 2;
+    grid-column: 1/2;
+  }
+  .card__imagen--nosotros {
+    object-fit: contain;
+  }
 }
 /* FOOTER */
 
@@ -341,7 +511,7 @@ fieldset {
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin-bottom: 2rem;
+  padding: 2rem 0;
 }
 .social__logo {
   width: 3.2rem;
@@ -354,8 +524,30 @@ fieldset {
 .social__logo--empresa {
   height: 10rem;
 }
+@media (min-width: 990px) {
+  .formulario {
+    padding: 0 20rem;
+  }
+}
+@media (min-width: 1440px) {
+  .formulario {
+    padding: 0 40rem;
+  }
+}
 
 /* Menu de apertura mobile */
+@media (max-width: 990px) {
+  /* Ocultamos navegación para mobile */
+  .header__navegacion {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  /* Ocultamos el botón del header para desktop */
+  .header__button {
+    display: none;
+  }
+}
 .header__button {
   width: 2.5rem;
   cursor: pointer;
@@ -390,6 +582,11 @@ fieldset {
   letter-spacing: -0.66px;
   margin-bottom: 6.2rem;
   text-align: center;
+}
+@media (min-width: 990px) {
+  .titulo {
+    font-size: 4rem;
+  }
 }
 /* Estilos Swiper */
 .swiper2 {

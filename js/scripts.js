@@ -4,8 +4,8 @@ const body = document.querySelector('body');
 const btnHeader = document.querySelector('.header__button');
 const header = document.querySelector('.header');
 const backdrop = document.querySelector('.backdrop');
-const desplegable = document.querySelector('.desplegable');
-
+const desplegableEnlace = document.querySelectorAll('.desplegable__enlace');
+const formulario = document.querySelector('.formulario');
 // Espera a que el documento inicie la app
 document.addEventListener('DOMContentLoaded', () => {
   initApp(); // Función que se encarga de iniciar todo el resto de las funciones
@@ -21,22 +21,24 @@ const crearMenuMobile = () => {
   backdrop.style.display = 'block'; // sacamos el backdrop con css
   const contenedor = document.createElement('div'); // creamos el contenedor de la modal
   contenedor.classList.add('desplegable');
+  // unica forma que he encontrado de restaurar el body en caso de que se clickee un link en mobile
+  contenedor.addEventListener('click', quitarMenu);
   contenedor.innerHTML = `
   <ul class="desplegable__lista">
     <li class="desplegable__item"
-      ><a href="#" class="desplegable__enlace">Producto</a></li
+      ><a href="#producto" class="desplegable__enlace">Producto</a></li
+    >
+    <li class="desplegable__item"
+      ><a href="#opiniones" class="desplegable__enlace">Opiniones</a></li
     >
     <li class="desplegable__item"
       ><a href="#precio" class="desplegable__enlace">Precio</a></li
     >
     <li class="desplegable__item"
-      ><a href="#" class="desplegable__enlace">Sobre Nosotros</a></li
+      ><a href="#nosotros" class="desplegable__enlace">¿Quienes Somos?</a></li
     >
     <li class="desplegable__item"
-      ><a href="#" class="desplegable__enlace">Opiniones</a></li
-    >
-    <li class="desplegable__item"
-      ><a href="#" class="desplegable__enlace">Contacto</a></li
+      ><a href="#contacto" class="desplegable__enlace">Contacto</a></li
     >
   </ul>
   `; // estructura de la modal
@@ -68,16 +70,31 @@ const eventListeners = () => {
   backdrop.addEventListener('click', () => {
     quitarMenu();
   });
+  formulario.addEventListener('click', (e) => {
+    e.preventDefault();
+  });
 };
 
 // Swiper opiniones
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  effect: 'cube',
+  effect: 'none',
   direction: 'horizontal',
+  slidesPerView: 1,
   loop: true,
+  spaceBetween: 100,
   autoplay: {
     delay: 5000,
+  },
+  // Diferente numero de slides dependiendo del tamaño de la pantalla
+  breakpoints: {
+    990: {
+      slidesPerView: 2,
+    },
+    1440: {
+      slidesPerView: 3,
+    },
   },
   // If we need pagination
   pagination: {
