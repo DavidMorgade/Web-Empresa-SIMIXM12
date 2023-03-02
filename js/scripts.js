@@ -1,6 +1,7 @@
 'use strict';
 /// Elementos del DOM
 const body = document.querySelector('body');
+const footer = document.querySelector('.footer');
 const btnHeader = document.querySelector('.header__button');
 const header = document.querySelector('.header');
 const backdrop = document.querySelector('.backdrop');
@@ -61,6 +62,41 @@ const quitarMenu = () => {
   body.style.height = 'auto';
   body.style.overflowY = 'scroll';
 };
+// Alerta de fomulario en caso de error
+const crearAlertaFormulario = () => {
+  if (document.querySelector('.formulario__alerta')) return;
+  const mensaje = document.createElement('p');
+  mensaje.classList.add('formulario__alerta');
+  mensaje.textContent = 'Rellene todos los campos con un formato válido';
+  formulario.appendChild(mensaje);
+  setTimeout(() => {
+    mensaje.remove();
+  }, 3000);
+};
+/// Cargar Spinner
+const cargarSpinner = () => {
+  formulario.remove(); // quitamos el formulario
+  const spinner = document.createElement('div'); // creamos el div para hacer un spinner
+  spinner.innerHTML = `<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>`; // cuerpo html del spinner
+  spinner.classList.add('lds-spinner'); // estilos css
+  footer.insertBefore(spinner, footer.firstChild); // lo añadimos al footer arriba de las redes sociales
+};
+// Respuesta de la request
+const respuestaRequest = (valida, texto) => {
+  const contenedor = document.createElement('div');
+  contenedor.classList.add('respuesta');
+  const icono = document.createElement('img');
+  const mensaje = document.createElement('p');
+  mensaje.textContent = texto; // agregamos el mensaje de la API al texto
+  contenedor.appendChild(icono);
+  contenedor.appendChild(mensaje);
+  if (valida) {
+    icono.src = '../images/success.png';
+  } else {
+    icono.src = '../images/failed.png';
+  }
+  footer.insertBefore(contenedor, footer.firstChild);
+};
 
 ///////////////////////////////Eventos en la interfaz////////////////////////////////////////////
 const eventListeners = () => {
@@ -70,9 +106,56 @@ const eventListeners = () => {
   backdrop.addEventListener('click', () => {
     quitarMenu();
   });
-  formulario.addEventListener('click', (e) => {
+  formulario.addEventListener('submit', (e) => {
     e.preventDefault();
+    mandarEmail();
   });
+};
+////////////////////// PETICION FETCH PARA EL FORMULARIO //////////
+const mandarEmail = () => {
+  let esValida = false; // Determina si la respuesta del servidor fue con exito o no.
+  const URL = 'https://singetecbackend-production.up.railway.app/'; /// URL DE LA API
+  const name = document.getElementById('nombre').value; /// valor del nombre
+  const email = document.getElementById('email').value; /// valor del email
+  const message = document.getElementById('mensaje').value; // valor del mensaje
+  const data = { name, email, message }; // formamos un objeto de JS con los valores
+
+  /// VALIDACION DEL FORMULARIO LADO CLIENTE ///
+  if (
+    data.name.trim() === '' ||
+    data.email.trim() === '' ||
+    data.message.trim() === ''
+  ) {
+    crearAlertaFormulario();
+    return;
+  }
+  formulario.reset(); // Si el formulario pasa la validación reseteamos
+  console.log(data);
+  cargarSpinner(); // añadimos el spinner de carga
+  fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json', // la api pide JSON
+      'Access-Control-Allow-Origin': '*',
+    },
+    body: JSON.stringify(data), // parseamos a JSON
+  })
+    .then((res) => {
+      if (res.ok) {
+        esValida = true;
+      } else {
+        esValida = false;
+      }
+      return res.text();
+    })
+    .then((data) => {
+      footer.removeChild(document.querySelector('.lds-spinner'));
+      respuestaRequest(esValida, data);
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    }); /// parseamos el JSON a objeto de JS
 };
 
 // Swiper opiniones
