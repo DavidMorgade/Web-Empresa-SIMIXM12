@@ -1,0 +1,55 @@
+{
+    "header": {
+        "titulo": "Servicio Integral de Gestión Técnica",
+        "producto": "Producto",
+        "opiniones": "Opiniones",
+        "precio": "Precio",
+        "nosotros": "¿Quienes Somos?",
+        "contacto": "Contacto"
+    },
+    "descripcion": {
+        "titulo": "Consigue el mejor soporte técnico del mercado.",
+        "texto": "Con nuestro servicio de soporte técnico nunca más tendrás que preocuparte por una incidencia informatica.",
+        "contacto": "Contacto"
+    },
+    "diferencias": {
+        "titulo": "¿En que nos diferenciamos respecto al resto?",
+        "descripcion": "Damos respuesta a distintos sectores y nos adaptamos a las necesidades de los mismos, dando una respuesta eficaz y rápida gracias a nuestros técnicos, tanto en remoto como en presencial.",
+        "soporte-titulo": "Soporte de la mano de profesionales",
+        "soporte-descripcion": "Nuestros profesionales se encuentran certificados en una amplia gama de tecnologías modernas y software actual, con el que podrán ayudarte con tus problemas.",
+        "entorno-titulo": "Nos adaptamos a tu entorno",
+        "entorno-descripcion": "Nuestros técnicos recibirán una formación especifica para el sector en concreto al que pertenezca su negocio, para un menor tiempo de resolución de incidencias",
+        "solucion-titulo": "La solución al alcance de un ¨click¨",
+        "solucion-descripcion": "Con nuestra aplicación de soporte técnico, tendrás una comunicación y resolución rápida a tus incidencias, ¡Casi en tiempo real!"
+    },
+    "opiniones": {
+        "titulo": "Opiniones",
+        "souleima": "¨Desde que contratamos el servicio de SINGETEC no hemos vuelto a tener ningún problema informático, los técnicos son rápidos y eficaces.¨",
+        "maria": "¨El sistema de tickets de la aplicación es maravilloso, adaptado completamente a mi empresa, lo recomiendo.¨",
+        "aurelio": "¨Tengo un empresa en el sector de la construcción, sin tener ni idea de informática los chicos de SINGETEC me han resulto todas las dudas que tenía y he acabado contratando su servicio¨",
+        "cayetana": "¨Herede la empresa de mi padre y no tenía ni idea de como funcionaba todo el sistema, los chicos de SINGETEC me han salvado la vida.¨",
+        "contacto": "Contacto"
+    },
+    "planes": {
+        "titulo": "Planes para tu empresa",
+        "premium-titulo": "Plan Premium",
+        "premium-descripcion": "Contrata nuestros servicio on-line de servicio técnico en remoto y resolveremos todas tus incidencias durante el horario laboral de tu empresa mediante GLPI",
+        "full-titulo": "Plan Full-Time",
+        "full-descripcion": "Obtendras servicio de soporte técnico 24 horas para cualquier tipo de incidencia informática, además de consultas telefónicas en caso de dudas, sin necesidad de usar nuestra plataforma GLPI",
+        "full-final": "El más seleccionado por nuestros usuarios"
+    },
+    "nosotros": {
+        "titulo": "¿Quienes Somos?",
+        "oscar": "Responsable de velar por la ciberseguridad en SINGETEC. Director de seguridad de la información. Encargado de proteger la información.",
+        "jorge": "Lider del departamento de tecnología e ingeniería. Responsable del desarrollo de políticas y procedimientos, para la mejora de productos y servicios a los clientes externos.",
+        "david": "Responsable de los sistemas y de las tecnologías de la información de la empresa, responsable de identificar y proveer las tecnologías necesarias para que los procesos de SINGETEC funcionen lo mejor posible."
+    },
+    "formulario": {
+        "titulo": "Contacta con nosotros",
+        "nombre": "Nombre",
+        "correo": "Correo Electrónico",
+        "mensaje": "Mensaje",
+        "mensaje-caja": "Pregunta por nuestros servicios...",
+        "enviar": "Enviar"
+    }
+}

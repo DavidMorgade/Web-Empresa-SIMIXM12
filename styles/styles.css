@@ -73,6 +73,33 @@ fieldset {
 .header__logo {
   height: 6rem;
 }
+/* Flags para cambiar idioma */
+.flags {
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.flags__item img {
+  height: 2rem;
+  max-width: 2rem;
+}
+@media (min-width: 990px) {
+  .flags {
+    justify-content: flex-start;
+  }
+  .flags__item img {
+    height: 4rem;
+    max-width: 4rem;
+    cursor: pointer;
+    transition: transform .2s ease;
+  }
+  .flags__item img:hover {
+    transform: scale(1.1);
+  }
+}
+
 /* Menu desplegable mobile */
 /* body {
   height: 100%;

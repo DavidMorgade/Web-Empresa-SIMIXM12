@@ -1,0 +1,55 @@
+{
+    "header": {
+        "titulo": "Comprehensive Technical Management Service",
+        "producto": "Product",
+        "opiniones": "Opinions",
+        "precio": "Prize",
+        "nosotros": "Who are we?",
+        "contacto": "Contact"
+    },
+    "descripcion": {
+        "titulo": "Get the best technical support on the market.",
+        "texto": "With our technical service you will never have to worry again with a computer incidence.",
+        "contacto": "Contact"
+    },
+    "diferencias": {
+        "titulo": "How do we differ from the rest?",
+        "descripcion": "We give responses to different sectors, and adapt ourself to the needs of your company, with a high quality and fast response thanks to our technicians, in remote or face-to-face.",
+        "soporte-titulo": "Professional hand support",
+        "soporte-descripcion": "Our professionals are certified in a wide range of modern technologies and current software, with which they can help you with your problems.",
+        "entorno-titulo": "We adapt to your environment",
+        "entorno-descripcion": "Our technicians will receive specific training for the sector to which your business belongs, for a faster resolution of incidents.",
+        "solucion-titulo": "The solution at the click of a button",
+        "solucion-descripcion": "With our technical support application, you will have quick communication and resolution to your incidents, almost in real-time!"        
+    },
+    "opiniones": {
+        "titulo": "Opinions",
+        "souleima": "¨Since we hired the service of SINGETEC we haven't had any computer problems, the technicians are fast and efficient.¨",
+        "maria": "¨The ticket system in the application is wonderful, completely adapted to my company, I recommend it.¨",
+        "aurelio": "¨I have a company in the construction sector, without any knowledge of computers, the guys at SINGETEC have solved all the doubts I had and I ended up hiring their service¨",
+        "cayetana": "¨I inherited my father's company and had no idea how the entire system worked, the guys at SINGETEC have saved my life.¨",
+        "contacto": "Contact"
+    },
+    "nosotros": {
+        "titulo": "Who We Are?",
+        "oscar": "Responsible for ensuring cybersecurity at SINGETEC. Information Security Director. In charge of protecting information.",
+        "jorge": "Leader of the technology and engineering department. Responsible for developing policies and procedures to improve products and services for external clients.",
+        "david": "Responsible for the systems and information technologies of the company, responsible for identifying and providing the necessary technologies for SINGETEC processes to function as best as possible."
+    },
+    "planes": {
+        "titulo": "Plans for your company",
+        "premium-titulo": "Premium Plan",
+        "premium-descripcion": "Hire our online remote technical support service and we will solve all your incidents during your company's business hours using GLPI.",
+        "full-titulo": "Full-Time Plan",
+        "full-descripcion": "You will get 24-hour technical support service for any type of computer incident, as well as phone consultations in case of doubts, without the need to use our GLPI platform.",
+        "full-final": "The most selected by our users"
+    },
+    "formulario": {
+        "titulo": "Contact us",
+        "nombre": "Name",
+        "correo": "Email",
+        "mensaje": "Message",
+        "mensaje-caja": "Ask about our services...",
+        "enviar": "Send"
+    }
+}

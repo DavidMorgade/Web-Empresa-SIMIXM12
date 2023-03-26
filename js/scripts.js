@@ -7,6 +7,12 @@ const header = document.querySelector('.header');
 const backdrop = document.querySelector('.backdrop');
 const desplegableEnlace = document.querySelectorAll('.desplegable__enlace');
 const formulario = document.querySelector('.formulario');
+const banderas = document.querySelector('#flags');
+const textosACambiar = document.querySelectorAll('[data-section]')
+
+// establecemos el idioma inicial
+let idioma = localStorage.getItem('idioma') || 'en';
+
 // Espera a que el documento inicie la app
 document.addEventListener('DOMContentLoaded', () => {
   initApp(); // Función que se encarga de iniciar todo el resto de las funciones
@@ -14,8 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Función que ejecuta el resto de funciones
 const initApp = () => {
+  changeLanguage(idioma)
   eventListeners();
 };
+//
+const identificarIdioma = async (idioma) => {
+  const requestJson = await fetch(`./languages/${idioma}.json`);
+  const text = await requestJson.json();
+  for(const textoACambiar of textosACambiar) {
+    const seccion = textoACambiar.dataset.section;
+    const valor = textoACambiar.dataset.value;
+    textoACambiar.textContent = text[seccion][valor];
+  }
+}
+
+// Funcion para cambiar el idioma
+const changeLanguage = async languageSelected => {
+  localStorage.setItem('idioma', languageSelected); // guardamos el idioma en local storage;
+  const requestJson = await fetch(`./languages/${languageSelected}.json`);
+  const text = await requestJson.json();
+  for(const textoACambiar of textosACambiar) {
+    const seccion = textoACambiar.dataset.section;
+    const valor = textoACambiar.dataset.value;
+    textoACambiar.textContent = text[seccion][valor];
+  }
+}
 
 ////////////////////////////////Crear elementos de la UI//////////////////////////////////////////////
 const crearMenuMobile = () => {
@@ -110,6 +139,9 @@ const eventListeners = () => {
     e.preventDefault();
     mandarEmail();
   });
+  banderas.addEventListener('click', (e) => {
+    changeLanguage(e.target.parentElement.dataset.language)
+  })
 };
 ////////////////////// PETICION FETCH PARA EL FORMULARIO //////////
 const mandarEmail = () => {
