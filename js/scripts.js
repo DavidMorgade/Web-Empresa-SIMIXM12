@@ -23,19 +23,20 @@ const initApp = () => {
   changeLanguage(idioma)
   eventListeners();
 };
-//
-const identificarIdioma = async (idioma) => {
-  const requestJson = await fetch(`./languages/${idioma}.json`);
-  const text = await requestJson.json();
-  for(const textoACambiar of textosACambiar) {
-    const seccion = textoACambiar.dataset.section;
-    const valor = textoACambiar.dataset.value;
-    textoACambiar.textContent = text[seccion][valor];
-  }
-}
 
 // Funcion para cambiar el idioma
 const changeLanguage = async languageSelected => {
+  const spainIcon = document.querySelector(`[data-language=es] img`);
+  const americaIcon = document.querySelector(`[data-language=en] img`);
+  console.log(spainIcon, americaIcon)
+  if(languageSelected === 'es') {
+    console.log('espa;ol')
+    spainIcon.style.opacity = '1';
+    americaIcon.style.opacity = '0.5';
+  } else {
+    americaIcon.style.opacity = '1';
+    spainIcon.style.opacity = '0.5';
+  }
   localStorage.setItem('idioma', languageSelected); // guardamos el idioma en local storage;
   const requestJson = await fetch(`./languages/${languageSelected}.json`);
   const text = await requestJson.json();

@@ -84,6 +84,7 @@ fieldset {
 .flags__item img {
   height: 2rem;
   max-width: 2rem;
+  opacity: 0.5;
 }
 @media (min-width: 990px) {
   .flags {
